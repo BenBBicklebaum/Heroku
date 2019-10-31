@@ -13,9 +13,12 @@ import requests as req
 import datetime
 import sys
 import openweathermapy.core as owm
-sys.path.append("../../../../../../../..")
-from config import consumer_key, consumer_secret, access_token, access_token_secret
-from weatherconfig import api_key
+consumer_key = os.environ.get("consumer_key")
+consumer_secret = os.environ.get("consumer_secret")
+access_token = os.environ.get("access_token")
+access_token_secret = os.environ.get("access_token_secret")
+weather_api_key = os.environ.get("weather_api_key")
+
 
 
 # In[5]:
@@ -26,16 +29,6 @@ consumer_key = consumer_key
 consumer_secret = consumer_secret
 access_token = access_token
 access_token_secret = access_token_secret
-
-
-# In[7]:
-
-
-# Weather API Key
-weather_api_key = api_key
-
-
-# In[ ]:
 
 
 # Create a function that gets the weather in London and Tweets it
