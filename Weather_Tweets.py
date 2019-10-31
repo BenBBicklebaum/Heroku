@@ -39,7 +39,6 @@ def WeatherTweet(tweet):
     url = "http://api.openweathermap.org/data/2.5/weather?"
     city = "Washington, D.C."
     units = "imperial"
-    query_url = url + "appid=" + api_key + "&q=" + city + "&units=" + units
     settings = {"units": "imperial", "appid": weather_api_key}
     # Perform the API call to get the weather
     washington = owm.get_current(city, **settings)
